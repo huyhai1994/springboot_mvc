@@ -1,7 +1,13 @@
+:root {
+    --image-width: 500px;
+    --breadcrumb-size: 20px;
+}
+
 body {
     font-family: Arial, serif;
 }
 
+/* === GALLERY START ===*/
 .gallery-wrapper {
     display: flex;
     align-items: center;
@@ -11,8 +17,8 @@ body {
 }
 
 .gallery-item {
-    width: 500px;
-    height: 500px;
+    width: var(--image-width);
+    height: var(--image-width);
     transition: opacity 0.5s ease;
     opacity: 1;
 }
@@ -21,6 +27,7 @@ body {
     opacity: 0;
 }
 
+/*=== GALLERY END ===*/
 .arrow {
     position: absolute;
 }
@@ -45,3 +52,24 @@ body {
     color: gray;
 }
 
+/*=== BREADCRUMB START ===*/
+
+.breadcrumb-wrapper {
+    position: absolute;
+    width: var(--image-width);
+    bottom: 157px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.breadcrumb {
+    display: block;
+    width: var(--breadcrumb-size);
+    height: var(--breadcrumb-size);
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+/*=== BREADCRUMB END ===*/
