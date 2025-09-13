@@ -8,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -16,7 +15,7 @@ public class MainController {
 
     @RequestMapping("/home/{color}")
     @ValidateInput
-    public String home(@PathVariable String color, Model page) {
+    public String home(@PathVariable @NonNull String color, Model page) {
         logger.info("request processing!!!");
         page.addAttribute("username", "Hai");
         page.addAttribute( "color", color);

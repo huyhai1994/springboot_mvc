@@ -11,8 +11,10 @@ public class ValidateAspect {
     private Logger logger = LoggerFactory.getLogger(ValidateAspect.class);
 
     @Around("@annotation(ValidateInput)")
-    public Object validate(ProceedingJoinPoint jp) throws InterruptedException {
-        logger.info("validating");
+    public Object validate(ProceedingJoinPoint jp) {
+        Object[] requestObject = jp.getArgs();
+        logger.info("AOP intercept for method with arg- {}", requestObject);
+        logger.info("AOP intercept for method with signatures- {}", jp.getSignature());
         Object returnedValue;
         try {
             returnedValue = jp.proceed();
