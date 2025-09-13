@@ -2,8 +2,6 @@ package org.example.springboot_leanning.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.springboot_leanning.service.ValidateInput;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
