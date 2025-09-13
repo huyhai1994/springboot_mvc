@@ -1,18 +1,23 @@
 package org.example.springboot_leanning.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.springboot_leanning.service.ValidateAspect;
 import org.example.springboot_leanning.service.ValidateInput;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.*;
 
+@Slf4j
 @Configuration
 @ComponentScan(basePackages = "org.example")
 @EnableAspectJAutoProxy
 public class ProjectConfig {
+
     @Bean
+    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     public ValidateAspect validateInput() {
+        log.info("validate aspect bean created!!!");
         return new ValidateAspect();
     }
 }
