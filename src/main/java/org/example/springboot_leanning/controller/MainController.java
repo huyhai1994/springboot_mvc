@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 public class MainController {
 
-    @RequestMapping("/home/{color}")
+    @RequestMapping("/home/{color}/{username}")
     @ValidateInput
-    public String home(@PathVariable @NonNull String color, Model page) {
-        page.addAttribute("username", "Hai");
-        page.addAttribute( "color", color);
+    public String home(@PathVariable @NonNull String color, @PathVariable String username, Model page) {
+        page.addAttribute("username", username);
+        page.addAttribute("color", color);
         return "home.html";
     }
 }
