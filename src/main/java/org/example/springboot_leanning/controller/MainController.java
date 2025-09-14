@@ -7,15 +7,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class MainController {
     private Logger logger = LoggerFactory.getLogger(MainController.class);
 
     @RequestMapping("/home")
-    public String home(@RequestParam String color, @RequestParam String name, Model page) {
+    public String home(@RequestParam() List<String> color, @RequestParam String name, Model page) {
         logger.info("request processing!!!");
         page.addAttribute("username", name);
-        page.addAttribute("color", color);
+        page.addAttribute("colors", color);
         return "home.html";
     }
 }

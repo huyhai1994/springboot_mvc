@@ -8,9 +8,11 @@
     <title>Implementing Spring Boot</title>
 </head>
 <body>
-<h1>Welcome
-    <span th:style="'color:' + ${color}"
-          th:text="${username}"></span>
-</h1>
+<div th:each="color: ${colors}">
+    <h1>Welcome
+        <span th:style="'color:' + ${color}"
+              th:text="${username}"></span>
+    </h1>
+</div>
 </body>
 </html>
