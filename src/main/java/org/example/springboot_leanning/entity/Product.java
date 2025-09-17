@@ -1,5 +1,8 @@
 package org.example.springboot_leanning.entity;
 
+import lombok.Builder;
+
+@Builder
 public class Product {
     private String name;
     private double price;
