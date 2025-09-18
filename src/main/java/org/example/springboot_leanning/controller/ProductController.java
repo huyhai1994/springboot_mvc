@@ -35,6 +35,6 @@ public class ProductController {
                         .build());
         var products = productService.findAll();
         model.addAttribute("products", products);
-        return "products.html";
+        return "redirect:/products";
     }
 }
