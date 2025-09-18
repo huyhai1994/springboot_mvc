@@ -1,0 +1,19 @@
+@media screen and (max-width: 1200px) {
+    .error-page-image {
+        transform: scale(1.8);
+        height: 100%;
+    }
+    table{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error-page-image {
+        transform: scale(3);
+        height: 100%;
+    }
+    table{
+        width: 90%;
+    }
+}

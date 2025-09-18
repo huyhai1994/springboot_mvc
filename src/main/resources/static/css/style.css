@@ -1,0 +1,129 @@
+/*ERROR PAGE START*/
+.error-page-body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.error-page-image {
+    width: 100%;
+    background-size: cover;
+}
+
+/*ERROR PAGE END*/
+
+
+/*###  TITLE AND SUBTITLE START ### */
+
+.page-title, .page-subtitle {
+    text-align: center;
+}
+
+.products-header-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
+}
+
+/*###  TITLE AND SUBTITLE END ### */
+
+/*TABLE START*/
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 2px solid rgb(140 140 140);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 80%;
+}
+
+th {
+    background-color: darkgrey;
+}
+
+th,
+td {
+    border: 1px solid rgb(160 160 160);
+    padding: 8px 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*TABLE END*/
+
+.btn {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    height: 27px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+/*### MODAL ###*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    padding: 0 20px;
+}
+
+.modal-content {
+    width: 50%;
+    height: 250px;
+    background-color: beige;
+    margin: auto;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    padding: 0 20px;
+}
+
+.modal-header {
+
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    background-color: orangered;
+    padding: 2px 5px;
+    color: white;
+}
+
+/*### MODAL ###*/
