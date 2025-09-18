@@ -12,7 +12,8 @@
 <h1 class="page-title">Products</h1>
 <div class="products-header-wrapper">
     <h2 class="page-subtitle">View Products</h2>
-    <div class="btn-add btn" data-tippy-content="Click to copy button 56"><i class="fa-solid fa-plus"></i></div>
+    <div class="btn-add btn" id="button-add" data-tippy-content="Click to copy button 56"><i
+            class="fa-solid fa-plus"></i></div>
 </div>
 <table>
     <thead>
@@ -27,12 +28,23 @@
     </tr>
 </table>
 
-<div class="modal">
+<div class="modal" id="modal">
     <!-- Modal content -->
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <h2 class="modal-header">Add a product</h2>
+        <form action="/products" method="post" class="modal-form">
+            Name: <input
+                type="text"
+                name="name"><br/>
+            Price: <input
+                type="number"
+                step="any"
+                name="price"><br/>
+            <button type="submit">Add product</button>
+        </form>
     </div>
 </div>
+<script th:src="@{/js/App.js}"></script>
 </body>
 </html>
