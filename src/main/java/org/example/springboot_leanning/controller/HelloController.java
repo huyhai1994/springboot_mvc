@@ -11,4 +11,10 @@ public class HelloController {
     public String hello() {
         return "Hello!";
     }
+
+    @GetMapping("/ciao")
+    @ResponseBody
+    public String ciao() {
+        return "ciao";
+    }
 }
