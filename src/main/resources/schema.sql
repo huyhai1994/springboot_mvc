@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS purchase
+(
+    id      INT AUTO_INCREMENT PRIMARY KEY,
+    product VARCHAR(50) NOT NULL,
+    price   DOUBLE      NOT NULL
+);
