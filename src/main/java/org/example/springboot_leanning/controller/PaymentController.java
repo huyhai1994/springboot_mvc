@@ -19,17 +19,9 @@ public class PaymentController {
 
     @PostMapping("/payment")
     public ResponseEntity<?> makePayment() {
-        try {
-            PaymentDetails paymentDetails = paymentService.processPayment();
-            return ResponseEntity
-                    .status(HttpStatus.OK)
-                    .body(paymentDetails);
-        } catch (NotEnoughMoneyException e) {
-            ErrorDetail errorDetails = new ErrorDetail();
-            errorDetails.setMessage("Not enough money to make the payment");
-            return ResponseEntity
-                    .status(HttpStatus.OK)
-                    .body(errorDetails);
-        }
+        PaymentDetails paymentDetails = paymentService.processPayment();
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(paymentDetails);
     }
 }
