@@ -4,3 +4,11 @@ server:
       enabled: false
     path:
       /error
+spring:
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:mysql://localhost/spring_quickly?useLegacyDatatimeCode=false&serverTimezone=UTC
+    username: root
+    password: 12345
