@@ -4,3 +4,13 @@ server:
       enabled: false
     path:
       /error
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=spring_db;encrypt=false;trustServerCertificate=true
+    username: sa
+    password: springboot_MVC1234!
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
